@@ -3,13 +3,11 @@ Clean code is the art of writing code that humans can understand. Learn how to w
 
 # Table of contents
 1. [Intro](#intro)
-  1.1. [Code is communication](#codeiscommunication)
-  1.2. [Reasons to care](#reasonstocare)
-    - wat
-      - inception noise
+  - [Code is communication](#codeiscommunication)
+  - [Reasons to care](#reasonstocare)
 
-## <a name="intro"></a>Intro
-### <a name="codeiscommunication"></a>Code is Communication
+# <a name="intro"></a>Intro
+## <a name="codeiscommunication"></a>Code is Communication
 > Code is like humor, if you have to explain it, it's bad.
 > ~ [Cory House](https://twitter.com/housecor)
 
@@ -19,5 +17,5 @@ Clean code is the art of writing code that humans can understand. Learn how to w
 > Any fool can write code that a computer can understand. Good programmers write code that _humans_ can understand.
 > ~ [Martin Fowler](https://twitter.com/martinfowler)
 
-### <a name="reasonstocare"></a>Reasons to Care
-#### 1. Reading is harder than writing
+## <a name="reasonstocare"></a>Reasons to Care
+### 1. Reading is harder than writing
