@@ -10,6 +10,10 @@ Clean code is the art of writing code that humans can understand. Learn how to w
    1. [Three Core Clean Coding Principles](#threeprinciples)
 1. [Naming](#naming)
    1. [Why naming matters](#whynamingmatters)
+      1. [Classes](#classes)
+      1. [Methods](#Methods)
+      1. [Abbreviations](#abbrevations)
+      1. [Booleans](#booleans)
 
 # <a name="intro"></a>Intro
 ## <a name="codeiscommunication"></a>Code is Communication
@@ -127,3 +131,17 @@ foreach(var price in prices)
 
 return total;
 ```
+
+### <a name="classes"></a>Classes
+Consider following class names: `WebsiteBO`, `Utility`, `Common`, `MyFunctions`, `JimmysUtils`, `x*Manager*`, `x*Processor*`, `x*Info*`.
+Poorly named classes are magnets to throw code in this spot in stead of making a new class with a good name that shows the purpose of the class name.
+
+A well designed class should have a single responsibility, and the name should reflect that. Some guidelines:
+- It's a noun, not a verb.
+- Be as specific as possible (SRP).
+- Name should lead to SRP.
+- Avoid generic prefixes of suffixes such as *Manager*.
+
+### <a name="methods"></a>Methods
+### <a name="abbreviations"></a>Abbreviations
+### <a name="booleans"></a>Booleans
