@@ -8,6 +8,8 @@ Clean code is the art of writing code that humans can understand. Learn how to w
    1. [We are ahtors](#weareauthors)
 1. [Clean Coding Principles](#cleancodingprinciples)
    1. [Three Core Clean Coding Principles](#threeprinciples)
+1. [Naming](#naming)
+   1. [Why naming matters](#whynamingmatters)
 
 # <a name="intro"></a>Intro
 ## <a name="codeiscommunication"></a>Code is Communication
@@ -64,3 +66,39 @@ Some things to look out for.
 - good practice
   - put the js inside a seperate js file
   - use C# to load up or inject dynmaic data in the header in a http call.
+
+> One language per file; avoid using one language to write another language/format via strings. Search, use and leverage libraries that do this for you, in stead of doing it yourself.
+
+#### Each technology is potentially evil
+- linq-2-sql could be potentially evil when it's used for massive queries or outer joins
+- sql is great but should embed display logic
+- c# is great but should never be used to write JS or HTML in strings, leverage a library for that
+
+### Maximing signal to noise
+- *TED* rules
+  - *T*erse: your code should not be excessively wordy
+  - *E*xpresive: clear what the code is trying to do
+  - *D*oes one thing: clear responsibily, and does this one thing well
+- When we read code our brain is the compiler. Humans can hold around 7 items in short term memory. This implies that it has an effect on
+  - number of parameters per method
+  - number of methods in a class
+  - number of varibales currently in scope
+- Refactor regurarely, as noise (or mess) builds over time. It builds quietly and slowly.
+
+### *DRY* Don't repeat yourself
+- It's same as DB normalization
+- Copy and paste is often a design problem (aka _duplication_). Avoid this as it creates a maintenance problem.
+  - Try to refactor.
+  - But be careful, not all code that looks the same has the same intent.
+
+### Self-documenting code
+> Understanding the original programmer's intent is the most difficult problem.
+> ~ Fjelstad & Hamlen (1979)
+
+- Express intent clearly
+- Use layers of abstraction, so the reader can walk through the different levels of detail
+- Format for readibility
+- Favor code over comments, comments are noise, if the code can tell the story
+
+# <a name="naming"></a>Naming
+## <a name="whynamingmatters"></a>Why naming matters
