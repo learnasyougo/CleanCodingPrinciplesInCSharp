@@ -3,7 +3,7 @@ Clean code is the art of writing code that humans can understand. Learn how to w
 
 # Table of contents
 1. [Intro](#intro)
-   1.1. [Code is communication](#codeiscommunication)
+  1.1. [Code is communication](#codeiscommunication)
 
 ## <a name="intro"></a>Intro
 ### <a name="codeiscommunication"></a>Code is Communication
