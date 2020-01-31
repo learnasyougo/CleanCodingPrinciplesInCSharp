@@ -6,6 +6,8 @@ Clean code is the art of writing code that humans can understand. Learn how to w
    1. [Code is communication](#codeiscommunication)
    1. [Reasons to care](#reasonstocare)
    1. [We are ahtors](#weareauthors)
+1. [Clean Coding Principles](#cleancodingprinciples)
+   1. [Three Core Clean Coding Principles](#threeprinciples)
 
 # <a name="intro"></a>Intro
 ## <a name="codeiscommunication"></a>Code is Communication
@@ -13,7 +15,7 @@ Clean code is the art of writing code that humans can understand. Learn how to w
 > ~ [Cory House](https://twitter.com/housecor)
 
 > Programming is the art of telling _another human_ what one wants the computer to do.
-> ~ [Donald Knuth]()
+> ~ Donald Knuth
 
 > Any fool can write code that a computer can understand. Good programmers write code that _humans_ can understand.
 > ~ [Martin Fowler](https://twitter.com/martinfowler)
@@ -32,4 +34,33 @@ Authors are writers of a book, article or text and:
 - one who writes or constructs an electronic document or system (_yes, we make systems)
 - an originator or creator of a theory or plan (_we do fall under this category as well_)
 
-An author strive to tell a compelling, clear, story. We have to take this in mind when doing so. The tools and conventions of _clean code principles_ help us to achieve this.
+An author strive to tell a compelling, clear, story. We have to take this in mind when doing so. 
+The tools and conventions of _clean code principles_ help us to achieve this.
+
+# <a name="cleancodingprinciples"></a>Clean Coding Principles
+## <a name="threeprinciples"></a>Three Core Clean Coding Principles
+1. Right tool for the job. Sometimes the hardest part is selecting the right technology for the job.
+1. High signal to noise ratio. Remove noise so the reader can easily extract the intent, intstead of dabbing through the noise.
+1. Self-documenting. Comments aren't the key, but expressive code is.
+
+### Picking the right tool for the job
+> Let's use _lunatic's favorite tool_ for _everything_.
+Not every technology is a good fit for the readibility, the security, the performance, etc... Creatively using the wrong tool isn't something to brag about
+
+*Example*: using regex to validate an e-mail address of standard _RFC822_. 
+This is simple not readible, referring to http://ex-parrot.com/~pwd/Mail-RFC822-Address.html. 
+
+### Watch for boundaries
+Each technology has a specific purpose, html is for content, css seperates style for the content markup, etc...
+Some things to look out for.
+- storing html in sql
+- html in a js string, or js in html
+- inline css styles
+- dynamic sql to generate your own sql
+- dynamic js made at c#
+
+*Example*:
+- bad practice ```var string = @"<script type=""text/javascript"">...</script>"; this.Header.Controls.Add(new LiteralControl("\r\n" + script));```
+- good practice
+  - put the js inside a seperate js file
+  - use C# to load up or inject dynmaic data in the header in a http call.
