@@ -102,3 +102,28 @@ Some things to look out for.
 
 # <a name="naming"></a>Naming
 ## <a name="whynamingmatters"></a>Why naming matters
+Consider the following code snipper
+```
+var p = new List<decimal>() { 5.50m, 1.48m };
+decimal t = 0;
+foreach(var i in p)
+   t += i;
+return t;
+```
+- Intent is a problem, what did the programmer meant to do here?
+
+Consider the cleaned up version, the only changes being done here are 
+- using different variable names that describe *intent*
+- using spaces (breaklines), as in a book we use paragrapgs, to seperate different blocks and make it easier for the reader to understand the different parts of
+  - setting up
+  - executing logic
+  - return a value
+```
+var prices = new List<decimal>() { 5.50m, 1.48m };
+decimal total = 0;
+
+foreach(var price in prices)
+   total += price;
+
+return total;
+```
